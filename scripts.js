@@ -32,10 +32,27 @@ function convertValues(){
         currency: "brl"
     }).format(inputCurrency)
 
-
-
-   
-
 }
+
+
+function changeCurrency(){
+
+    const currencyName = document.querySelector("#currency-name")
+    const currencyImg = document.querySelector(".currency-img")
+
+    if(currencySelect.value == "dolar"){
+        currencyName.innerHTML = "Dolar"
+        currencyImg.src = "./assets/Dolar.png"
+    }
+    if(currencySelect.value == "euro"){
+        currencyName.innerHTML = "Euro"
+        currencyImg.src = "./assets/Euro.png"
+    }
+
+    convertValues()
+    
+}
+
+currencySelect.addEventListener("change", changeCurrency)
 convertButton.addEventListener("click", convertValues)
 
