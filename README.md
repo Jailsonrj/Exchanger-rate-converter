@@ -1,5 +1,5 @@
-Exchanger Rate Converter
+<h1>Exchanger Rate Converter</h1>
 
-Projeto de um coversor de moedas contendo aplicaçao HTML, CSS mas fortalencendo sobretudo o JS.
+<p>Projeto de um coversor de moedas contendo aplicaçao HTML, CSS mas fortalencendo sobretudo o JS.</p>
 
 
