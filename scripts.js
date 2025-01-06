@@ -46,9 +46,7 @@ function convertValues(){
         style: "currency",
         currency: "brl"
     }).format(inputCurrency)
-
 }
-
 
 function changeCurrency(){
 
@@ -74,7 +72,7 @@ function changeCurrency(){
     }
 
     convertValues()
-    
+ 
 }
 
 currencySelect.addEventListener("change", changeCurrency)
