@@ -1,5 +1,6 @@
 const convertButton = document.querySelector(".convert-button")
 const currencySelect = document.querySelector(".currency-select")
+const coinSelect = document.querySelector(".coin-select")
 
 function convertValues(){
     const inputCurrency =document.querySelector(".input-currency").value
@@ -20,6 +21,14 @@ function convertValues(){
             currency: "USD"
         }).format(convertedValue)
     }
+
+    if(currencySelect.value == "real"){
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-br", {
+            style: "currency",
+            currency: "brl"
+        }).format(inputCurrency)
+    }
+
 
     if(currencySelect.value == "euro"){
         currencyValueConverted.innerHTML = new Intl.NumberFormat("de-de", {
@@ -48,6 +57,36 @@ function convertValues(){
     }).format(inputCurrency)
 }
 
+function changeCoinSelect(){
+
+    const coinName = document.querySelector("#coin-name")
+    const coinImg = document.querySelector(".coin-img")
+
+    console.log(coinName)
+   
+    if(coinSelect.value == "coin-dolar"){
+        coinName.innerHTML = "Dolar"
+        coinImg.src = "./assets/Dolar.png"
+    }
+    if(coinSelect.value == "coin-real"){
+        coinName.innerHTML = "Real"
+        coinImg.src = "./assets/Real.png"
+    }
+    if(coinSelect.value == "coin-euro"){
+        coinName.innerHTML = "Euro"
+        coinImg.src = "./assets/Euro.png"
+    }
+    if(coinSelect.value == "coin-libra"){
+        coinName.innerHTML = "Libra"
+        coinImg.src = "./assets/Libra.png"
+    }
+    if(coinSelect.value == "coin-bitcoin"){
+        coinName.innerHTML = "Bitcoin"
+        coinImg.src = "./assets/Bitcoin.png"
+    }
+
+}
+
 function changeCurrency(){
 
     const currencyName = document.querySelector("#currency-name")
@@ -70,11 +109,16 @@ function changeCurrency(){
         currencyName.innerHTML = "Libra"
         currencyImg.src = "./assets/Libra.png"
     }
+    if(currencySelect.value == "real"){
+        currencyName.innerHTML = "Real"
+        currencyImg.src = "./assets/Real.png"
+    }
 
     convertValues()
  
 }
 
+coinSelect.addEventListener("change", changeCoinSelect)
 currencySelect.addEventListener("change", changeCurrency)
 convertButton.addEventListener("click", convertValues)
 
