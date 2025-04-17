@@ -1,5 +1,6 @@
-<h1>Exchanger Rate Converter</h1>
+<h1>Exchange-rate-converter </h1>
 
-<p>Projeto de um coversor de moedas contendo aplicaçao HTML, CSS mas fortalencendo sobretudo o JS.</p>
+<p>Conversor de moedas com HTML, CSS e JavaScript, capaz de realizar conversões dinâmicas entre diferentes moedas. A aplicação possui uma interface responsiva e consome dados de câmbio atualizados via API externa.</p>
+
 
 
